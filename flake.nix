@@ -93,6 +93,7 @@
             pkgs.coqPackages_8_19.coq
             pkgs.coqPackages_8_19.ssprove
             pkgs.coqPackages_8_19.nominal-ssprove
+            pkgs.coqPackages_8_19.vscoq-language-server
             pkgs.coqPackages_8_19.coqide
             (pkgs.callPackage vimPkg {})
           ];
