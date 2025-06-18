@@ -1,6 +1,6 @@
 # Nominal-SSProve Project Template
-This repository serves as a project template for getting started with Nominal-SSProve.
-Installation instructions are found below, and the file `theories/Guide.v` shows how to
+This repository serves as a project template for getting started with [Nominal-SSProve](https://github.com/MarkusKL/nominal-ssprove).
+Installation instructions are found below, and the file [`theories/Guide.v`](https://github.com/MarkusKL/nominal-ssprove-template/blob/main/theories/Guide.v) shows how to
 use Nominal-SSProve by working through an example. To start your own project, simply copy,
 clone, or fork this repository and create new files in `theories/`.
 
@@ -20,21 +20,25 @@ following the steps below.
    ```
    It is recommended to add build caches to significantly speed up initial environment setup time.
    Building locally takes around an hour, while downloading from cache takes around five minutes.
-3. Run `nix develop` to install Rocq dependencies and to enter a development shell.
-   Exit development shell with command `exit`.
+3. Enable flakes in nix by appending the local nix config file with the following command:
+   ```
+   echo 'experimental-features = nix-command flakes' >> ~/.config/nix/nix.conf
+   ```
+4. Run `nix develop` to install Rocq dependencies and to enter a development shell.
+   Exit the development shell with command `exit`.
 
-## Getting started
+## Getting Started
 
-After following the installation instructions use `nix develop` to enter the development environment.
-The development environment supports CoqIDE, vim (with coq-tail installed) and vscode
+After following the installation instructions use `nix develop` to enter the development shell.
+The development shell supports CoqIDE, vim (with coq-tail installed) and vscode
 (to be installed separately and requires the VsCoq extension).
 
 CoqIDE is easiest to get started with for users that are new to Rocq.
-Open the guide in CoqIDE using `coqide theories/Guide.v`.
+Open the guide file in CoqIDE using `coqide theories/Guide.v`.
 
-## Next steps
+## Next Steps
 
-There are many possible next steps from here. Here are a few suggestions:
-* Read more about SSProve in the README (..) and DOC (..).
-* Explore other examples in Nominal-SSProve (..) and SSProve (..)
+There are many possible next steps from this point. Here are a few suggestions:
+* Read more about SSProve in the [README](https://github.com/ssprove/ssprove) and [DOC](https://github.com/SSProve/ssprove/blob/main/DOC.md).
+* Explore other [examples in Nominal-SSProve](https://github.com/MarkusKL/nominal-ssprove/tree/master/theories/Example) and [examples in SSProve](https://github.com/SSProve/ssprove/tree/main/theories/Crypt/examples).
 * Begin to formalize a cryptographic argument of your own.
