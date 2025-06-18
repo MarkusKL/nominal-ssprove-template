@@ -1,0 +1,4 @@
+-R theories Project
+
+# Put files to be compiled with `make`:
+theories/Guide.v
